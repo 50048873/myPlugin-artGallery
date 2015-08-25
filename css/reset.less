@@ -1,0 +1,182 @@
+@charset "UTF-8";  
+/* CSS reset */
+@import "normalize.less";
+
+//设置浏览器默认样式
+
+//根据项目需求首先设置盒模型
+* { 
+ 	-moz-box-sizing: border-box; 
+ 	-webkit-box-sizing: border-box; 
+ 	box-sizing: border-box; 
+ }
+
+html { 
+	font-size: 10px;
+	color: #000;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+	margin: 0; 
+	padding: 0; 
+	vertical-align: baseline;
+}
+body {
+	font-family: 'Helvetica Neue',
+				'Helvetica',
+				'Arial',
+                'Hiragino Sans GB', 
+                'STHeiti',
+                'Microsoft Yahei', 
+                'WenQuanYi Micro Hei',
+                'sans-serif';
+	font-size: 14px;
+	line-height: 1.42857143;
+	background-color: #fff;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+caption,th { 
+	text-align: left; 
+}
+ol, ul{
+	list-style: none;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+}
+input, select, textarea { 
+	background-color: #fff;
+}
+textarea { 
+	resize: none;
+}
+label { 
+	cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { //移除数字小箭头
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input[type="number"] {
+	-moz-appearance:textfield;
+}
+::-webkit-input-placeholder { //设置placeholder点位文字颜色
+	color:#565656;
+}
+:focus { 
+	outline: 0; 
+}
+:link, :visited { 
+	text-decoration: none; 
+}
+a:hover, a:focus { 
+	text-decoration: none;
+}
+a:link, a:visited { //定义正常链接的样式；定义已访问过链接的样式
+	//color: gray;
+}
+a:hover, a:active { //定义鼠标悬浮在链接上时的样式；定义鼠标点击链接时的样式
+	color: red;
+}
+fieldset,img,abbr,acronym { 
+	border: 0; 
+}
+img {
+	vertical-align: middle;
+}
+
+//input focus效果类
+input {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+input:focus {
+  border-color: red!important;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.2), 0 0 8px rgba(102, 175, 233, .8);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.2), 0 0 8px rgba(102, 175, 233, .8);
+}
+input::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+input:-ms-input-placeholder {
+  color: #999;
+}
+input::-webkit-input-placeholder {
+  color: #999;
+}
+input[disabled],
+input[readonly],
+fieldset[disabled] input {
+  background-color: #eee;
+  opacity: 1;
+}
+input[disabled],
+fieldset[disabled] input {
+  cursor: not-allowed;
+}
+
+//常用公共类
+.clearfix:after { 
+	clear: both;
+}
+.clearfix:before,
+.clearfix:after { 
+	content: ' ';
+	display: table;
+}
+.clearfix { 
+	*zoom: 1;
+}
+.clear { 
+	height:0; 
+	overflow:hidden; 
+	clear:both
+}
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+.text-c { 
+	text-align: center!important;
+}
+.text-r { 
+	text-align: right!important;
+}
+.hide { 
+	display: none;
+}
+.noMargin { 
+	margin: 0!important;
+}
+.noBorder { 
+	border: none!important;
+}
+.ellipsis { 
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.noselect { 
+	-moz-user-select:none;
+}
